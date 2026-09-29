@@ -1,29 +1,271 @@
-*{
-    outline: 0;
-    padding: 0;
+/* ===== BASE ===== */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
+  }
 
-body {
-    background: linear-gradient(
-        #F0D7AD,
-        #F5E9DA
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-.cabecalho ul {
-    color: #ffffff;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo {
+    color: #777;
+    margin-bottom: 30px;
+  }
+
+  /* ===== BOTAO ===== */
+  .botao {
+    display: inline-block;
+    background-color: #ff8a3d;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
+  }
+
+  .botao:hover {
+    background-color: #e6742a;
+  }
+
+  /* ===== MENU ===== */
+  header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e9894a;
+  }
+
+  nav ul {
     list-style: none;
-    padding: 5px;
     display: flex;
     gap: 20px;
-    margin-left: 1600px;
-}
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  nav a:hover {
+    color: #c05107;
+  }
+
+  /* ===== INICIO ===== */
+  .inicio {
+    background-color: #fad2b0;
+    padding: 80px 20px;
+  }
+
+  .inicio h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .inicio h1 span {
+    color: #ff8a3d;
+  }
+
+  .inicio p {
+    color: #666;
+    margin-bottom: 25px;
+  }
+
+  .emoji-grande {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+
+  /* ===== SERVICOS ===== */
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: white;
+    width: 220px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover {
+    background-color: #fff3e8;
+  }
+
+  .icone {
+    font-size: 3rem;
+    cursor:default;
+  }
+
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+
+  .card p {
+    color: #777;
+  }
+
+  /* ===== NUMEROS ===== */
+  .numeros-fundo {
+    background-color: #ffe9d6;
+  }
+
+  .numeros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .numeros strong {
+    display: block;
+    font-size: 2.5rem;
+    color: #3a9d7a;
+  }
+
+  /* ===== PROMOCAO ===== */
+  .promocao {
+    background-color: #3a9d7a;
+    color: white;
+  }
+
+  .promocao p {
+    margin-bottom: 20px;
+  }
+
+  .promocao .botao {
+    background-color: white;
+    color: #3a9d7a;
+  }
+
+  /* ===== LOGIN ===== */
+  .login-tela {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffe9d6;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-tela:target {
+    display: flex;
+  }
+
+  .login-caixa {
+    background-color: white;
+    width: 90%;
+    max-width: 380px;
+    padding: 35px 30px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .login-caixa label {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  .login-caixa input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .login-caixa button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    
+  }
+
+  .login-caixa p {
+    margin-top: 12px;
+    margin-right:  12px;
+  }
+
+  .login-caixa a {
+    color: #ff8a3d;
+    text-decoration: none;
+  }
+
+  .login-caixa h2 {
+    margin-left: -30px;
+  }
+
+  /* ===== RODAPE ===== */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /*==== AGENDAMENTOS ====*/
+  .agendamentos {
+    background-color: #fad2b0;
+    padding-bottom: 20px;
+    margin-left: 756px;
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .agendamentos #paragrafo {
+    font-display: none;
+    cursor: default;
+  }
+
+  /* ===== CELULAR ===== */
+  @media (max-width: 600px) {
+    .inicio h1 {
+      font-size: 1.8rem;
+    }
+  }
